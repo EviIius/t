@@ -1,0 +1,163 @@
+.root {
+  display: flex;
+  height: 100%;
+  background: var(--bg-mantle);
+  border-right: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.activityBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48px;
+  background: var(--bg-crust);
+  border-right: 1px solid var(--border);
+  padding-top: 8px;
+  flex-shrink: 0;
+}
+
+.logoMark {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4A9EFF, #9B59B6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.logoIcon {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.navBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: var(--overlay0);
+  font-size: 18px;
+  margin-bottom: 4px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.navBtn:hover {
+  color: var(--subtext0);
+  background: var(--bg-surface0);
+}
+
+.navActive {
+  color: var(--text) !important;
+  border-left: 2px solid var(--blue);
+  border-radius: 0 4px 4px 0;
+}
+
+.panel {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  height: 35px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--subtext0);
+  flex-shrink: 0;
+}
+
+.headerBtn {
+  color: var(--overlay0);
+  font-size: 14px;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.headerBtn:hover {
+  color: var(--text);
+  background: var(--bg-surface0);
+}
+
+.tree {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 8px;
+}
+
+.treeNode {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  padding-right: 12px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  border-radius: 4px;
+  margin: 1px 4px;
+}
+
+.treeNode:hover {
+  background: var(--bg-surface0);
+}
+
+.selected {
+  background: var(--bg-surface1) !important;
+}
+
+.chevron {
+  color: var(--overlay0);
+  font-size: 10px;
+  width: 14px;
+  flex-shrink: 0;
+  text-align: center;
+  margin-right: 2px;
+}
+
+.label {
+  font-size: 12.5px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.agentDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-left: 6px;
+  margin-right: 2px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--overlay0);
+  cursor: pointer;
+  flex-shrink: 0;
+  border-top: 1px solid var(--border);
+}
+
+.sectionHeader:hover {
+  color: var(--subtext0);
+}

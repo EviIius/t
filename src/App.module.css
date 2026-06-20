@@ -1,0 +1,220 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-base);
+  overflow: hidden;
+}
+
+/* ── Title Bar ── */
+.titleBar {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  background: var(--bg-crust);
+  border-bottom: 1px solid var(--border);
+  padding: 0 12px;
+  flex-shrink: 0;
+  gap: 12px;
+  -webkit-app-region: drag;
+}
+
+.titleLeft {
+  flex: 0 0 auto;
+  -webkit-app-region: no-drag;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoMark {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4A9EFF 0%, #9B59B6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: 'JetBrains Mono', monospace;
+  flex-shrink: 0;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoName {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+}
+
+.logoSub {
+  font-size: 9.5px;
+  color: var(--overlay0);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.commandBtn {
+  flex: 1;
+  max-width: 480px;
+  height: 32px;
+  background: var(--bg-surface0);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  -webkit-app-region: no-drag;
+}
+
+.commandBtn:hover {
+  border-color: var(--blue);
+  background: var(--bg-surface1);
+}
+
+.cmdIcon {
+  color: var(--overlay0);
+  font-size: 16px;
+}
+
+.cmdPlaceholder {
+  flex: 1;
+  font-size: 13px;
+  color: var(--overlay0);
+  text-align: left;
+}
+
+.cmdKbd {
+  font-size: 11px;
+  color: var(--overlay0);
+  background: var(--bg-surface1);
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.titleRight {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  -webkit-app-region: no-drag;
+}
+
+.titleBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--overlay0);
+  font-size: 16px;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.titleBtn:hover {
+  color: var(--text);
+  background: var(--bg-surface0);
+}
+
+/* ── Body ── */
+.body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* ── Main area ── */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.sceneArea {
+  flex-shrink: 0;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.resizeHandle {
+  height: 5px;
+  cursor: ns-resize;
+  background: var(--border);
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.resizeHandle:hover,
+.dragging {
+  background: var(--blue);
+}
+
+.bottomArea {
+  flex-shrink: 0;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* ── Status Bar ── */
+.statusBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 24px;
+  background: var(--bg-crust);
+  border-top: 1px solid var(--border);
+  padding: 0 8px;
+  flex-shrink: 0;
+  font-size: 11px;
+}
+
+.statusLeft,
+.statusRight {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.statusItem {
+  padding: 0 8px;
+  color: var(--subtext0);
+  height: 24px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.statusItem:hover {
+  background: var(--bg-surface0);
+}
+
+.statusSep {
+  width: 1px;
+  height: 14px;
+  background: var(--border);
+  margin: 0 4px;
+}
